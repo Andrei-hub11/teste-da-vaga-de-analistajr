@@ -1,21 +1,21 @@
-![Screenshot 2024-04-09 at 23-43-11 Teste de Vaga de Aanalist Jr](https://github.com/Andrei-hub11/teste-da-vaga-de-analistajr/assets/83555334/b12255d4-f030-49ec-8866-51b9e4e1f824)
+![Screenshot 2024-04-10 at 00-48-06 Teste de Vaga de Aanalist Jr](https://github.com/Andrei-hub11/teste-da-vaga-de-analistajr/assets/83555334/0c3f1f5a-77d4-455d-9210-4198c8516a3f)
 
 ![Screenshot 2024-04-09 at 23-43-54 Teste de Vaga de Aanalist Jr](https://github.com/Andrei-hub11/teste-da-vaga-de-analistajr/assets/83555334/d5f6c3d0-3c6e-490e-a04e-b75166272721)
 
 ![Screenshot 2024-04-09 at 23-48-13 Teste de Vaga de Aanalist Jr](https://github.com/Andrei-hub11/teste-da-vaga-de-analistajr/assets/83555334/1a775dfe-5238-42fe-b0cc-34a4c251e6f5)
 
-![Screenshot 2024-04-09 at 23-44-16 Teste de Vaga de Aanalist Jr](https://github.com/Andrei-hub11/teste-da-vaga-de-analistajr/assets/83555334/1f9fbce4-466b-495e-a401-b819c0c93426)
+![Screenshot 2024-04-10 at 00-50-01 Teste de Vaga de Aanalist Jr](https://github.com/Andrei-hub11/teste-da-vaga-de-analistajr/assets/83555334/3ce1db21-9781-4b34-8c5c-0e0973722af1)
 
 # Endpoints:
 
 ### Obtém Todos Objetos de Empresa
 
--   URL: /api/v1/companies
--   Método HTTP: GET
--   Cabeçalho de Autenticação: Não é necessário autenticação.
--   Corpo da Solicitação (JSON):
+- URL: /api/v1/companies
+- Método HTTP: GET
+- Cabeçalho de Autenticação: Não é necessário autenticação.
+- Corpo da Solicitação (JSON):
 
--   Resposta de Sucesso (200 OK):
+- Resposta de Sucesso (200 OK):
 
 ```
 [
@@ -30,7 +30,7 @@
 ]
 ```
 
--   Resposta de Erro (500 Internal Server Error):
+- Resposta de Erro (500 Internal Server Error):
 
 ```
 {
@@ -41,10 +41,10 @@
 
 ### Adiciona Nova Empresa
 
--   URL: /api/v1/create-company
--   Método HTTP: POST
--   Cabeçalho de Autenticação: Não é necessário autenticação.
--   Corpo da Solicitação (JSON):
+- URL: /api/v1/create-company
+- Método HTTP: POST
+- Cabeçalho de Autenticação: Não é necessário autenticação.
+- Corpo da Solicitação (JSON):
 
 ```
 {
@@ -56,7 +56,7 @@
 }
 ```
 
--   Resposta de Sucesso (200 OK):
+- Resposta de Sucesso (200 OK):
 
 ```
 {
@@ -69,7 +69,7 @@
 }
 ```
 
--   Resposta de Erro (400 Bad Request):
+- Resposta de Erro (400 Bad Request):
 
 ```
 {
@@ -78,7 +78,7 @@
 }
 ```
 
--   Resposta de Erro (500 Internal Server Error):
+- Resposta de Erro (500 Internal Server Error):
 
 ```
 {
@@ -89,10 +89,10 @@
 
 ### Atualiza Registro de Empresa
 
--   URL: /api/v1/update-company
--   Método HTTP: PUT
--   Cabeçalho de Autenticação: Não é necessário autenticação.
--   Corpo da Solicitação (JSON):
+- URL: /api/v1/update-company
+- Método HTTP: PUT
+- Cabeçalho de Autenticação: Não é necessário autenticação.
+- Corpo da Solicitação (JSON):
 
 ```
 {
@@ -105,13 +105,13 @@
 }
 ```
 
--   Resposta de Sucesso (200 OK):
+- Resposta de Sucesso (200 OK):
 
 ```
 true
 ```
 
--   Resposta de Erro (400 Bad Request):
+- Resposta de Erro (400 Bad Request):
 
 ```
 {
@@ -120,7 +120,7 @@ true
 }
 ```
 
--   Resposta de Erro (500 Internal Server Error):
+- Resposta de Erro (500 Internal Server Error):
 
 ```
 {
@@ -131,19 +131,19 @@ true
 
 ### Deleta Registro de Empresa
 
--   URL: /api/v1/delete-company/{companyId}
--   Método HTTP: PUT
--   Cabeçalho de Autenticação: Não é necessário autenticação.
--   Parâmetro de Rota (Path Parameter):
-    companyId (string): Id do objeto
+- URL: /api/v1/delete-company/{companyId}
+- Método HTTP: PUT
+- Cabeçalho de Autenticação: Não é necessário autenticação.
+- Parâmetro de Rota (Path Parameter):
+  companyId (string): Id do objeto
 
--   Resposta de Sucesso (200 OK):
+- Resposta de Sucesso (200 OK):
 
 ```
 true
 ```
 
--   Resposta de Erro (500 Internal Server Error):
+- Resposta de Erro (500 Internal Server Error):
 
 ```
 {
@@ -151,3 +151,4 @@ true
 "Error": "Mensagem de erro específica"
 }
 ```
+

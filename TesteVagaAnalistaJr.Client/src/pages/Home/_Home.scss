@@ -152,7 +152,7 @@
             background: $secondary-color;
         }
 
-        &__table-data:nth-child(4) {
+        &__table-data:nth-child(5) {
             position: relative;
             border: 1px solid $text-color;
             padding: 1rem;
@@ -177,7 +177,7 @@
             padding: 0 0 0 1rem;
         }
 
-        &__table-data:nth-child(4)::before {
+        &__table-data:nth-child(5)::before {
             padding: 0.4rem 0 0 1rem;
         }
 
@@ -324,7 +324,7 @@
             font-size: clamp(1.6rem, 1.19vi + 0.89rem, 1.8rem);
         }
 
-        &__table-data:nth-child(4) {
+        &__table-data:nth-child(5) {
             padding-left: 94%;
         }
     }

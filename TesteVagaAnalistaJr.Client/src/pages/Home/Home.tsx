@@ -131,6 +131,14 @@ function Home() {
                                       </p>
                                   </td>
                                   <td
+                                      data-label="Razão Social"
+                                      className="home__table-data"
+                                  >
+                                      <p className="home__table-p">
+                                          {company.CorporateReason}
+                                      </p>
+                                  </td>
+                                  <td
                                       data-label="Status"
                                       className="home__table-data"
                                   >
