@@ -1,0 +1,24 @@
+// responsividade
+@mixin for-size($size) {
+    @if ($size == smaller-phone) {
+        @media (min-width: 22.5rem) {
+            @content;
+        }
+    } @else if ($size == medium-phone) {
+        @media (min-width: 26.875rem) {
+            @content;
+        }
+    } @else if ($size == phone-only) {
+        @media (min-width: 37.5rem) {
+            @content;
+        }
+    } @else if ($size == tablet-portrait-up) {
+        @media (min-width: 48em) {
+            @content;
+        }
+    } @else if ($size == tablet-landscape-up) {
+        @media (min-width: 56.25em) {
+            @content;
+        }
+    }
+}

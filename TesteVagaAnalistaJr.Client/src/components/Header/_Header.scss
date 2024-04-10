@@ -1,0 +1,20 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+.headline {
+    @include for-size(smaller-phone) {
+        margin: 2.4rem 2rem;
+        font-size: clamp(1.6rem, 2.86vi + 0.57rem, 1.8rem);
+        font-family: $headline-font;
+        font-weight: bold;
+        color: $text-color;
+    }
+
+    @include for-size(medium-phone) {
+        font-size: clamp(1.8rem, 1.18vi + 1.29rem, 2rem);
+    }
+
+    @include for-size(tablet-portrait-up) {
+        font-size: clamp(2rem, 1.52vi + 0.84rem, 2.2rem);
+    }
+}

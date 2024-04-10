@@ -1,0 +1,170 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+.form {
+    @include for-size(smaller-phone) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        row-gap: 1.6rem;
+
+        &__control {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        &__input {
+            font-size: 1.4rem;
+            //deve crescer de 32.8rem até 39.4rem no espaço entre telas de 360px e 430px
+            width: clamp(32.8rem, 94.29vi + -1.14rem, 39.4rem);
+            height: 4.6rem;
+            color: $text-color;
+            background: $bg-color;
+            border-radius: 0.5rem;
+            border: 0.1rem solid $text-color;
+            outline: 0;
+            padding-left: 1rem;
+            caret-color: $text-color;
+            letter-spacing: 0.1rem;
+
+            &::placeholder {
+                letter-spacing: 0.1rem;
+                font-weight: bold;
+                letter-spacing: 0.1rem;
+            }
+
+            &:focus {
+                border: 0.1rem solid $text-color;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:hover {
+                -webkit-box-shadow: 0 0 0 5rem $bg-color;
+                -webkit-text-fill-color: $bg-color;
+            }
+        }
+
+        &__input--variant {
+            color: red;
+
+            &:focus {
+                border: 0.2rem solid red;
+            }
+        }
+
+        &__msg {
+            visibility: hidden;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ff0000;
+            letter-spacing: 0.1rem;
+        }
+
+        &__msg--variant {
+            visibility: visible;
+        }
+
+        &__calendar {
+            display: flex;
+            justify-content: flex-end;
+            //deve crescer de 32.8rem até 39.4rem no espaço entre telas de 360px e 430px
+            width: clamp(32.8rem, 94.29vi + -1.14rem, 39.4rem);
+        }
+
+        &__calendar .MuiTypography-root {
+            color: $text-color;
+            //deve crescer de 1.4rem 1.6rem no espaço entre telas de 360px e 430px
+            font-size: clamp(1.4rem, 2.86vi + 0.37rem, 1.6rem);
+            font-weight: bold;
+        }
+
+        &__status {
+            display: flex;
+            justify-content: flex-end;
+            //deve crescer de 32.8rem até 39.4rem no espaço entre telas de 360px e 430px
+            width: clamp(32.8rem, 94.29vi + -1.14rem, 39.4rem);
+        }
+
+        &__status-label {
+            font-size: 1.4rem;
+            font-weight: bold;
+            font-family: $headline-font;
+            text-transform: uppercase;
+            color: $text-color;
+        }
+
+        &__status-container {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            padding: 1rem;
+            border: 0.1rem solid $text-color;
+        }
+
+        .btn--hidden {
+            display: none;
+        }
+
+        .btn--status {
+            cursor: pointer;
+        }
+    }
+
+    @include for-size(medium-phone) {
+        &__input {
+            width: clamp(39.4rem, 50.59vi + 17.65rem, 48rem);
+        }
+
+        &__msg {
+            font-size: 1.3rem;
+        }
+
+        &__calendar {
+            width: clamp(39.4rem, 50.59vi + 17.65rem, 48rem);
+        }
+
+        &__status {
+            width: clamp(39.4rem, 50.59vi + 17.65rem, 48rem);
+        }
+    }
+
+    @include for-size(phone-only) {
+        &__input {
+            width: clamp(48rem, 27.38vi + 31.57rem, 52.6rem);
+        }
+
+        &__msg {
+            font-size: 1.4rem;
+        }
+
+        &__calendar {
+            width: clamp(48rem, 27.38vi + 31.57rem, 52.6rem);
+        }
+
+        &__status {
+            width: clamp(48rem, 27.38vi + 31.57rem, 52.6rem);
+        }
+    }
+
+    @include for-size(tablet-portrait-up) {
+        &__input {
+            width: clamp(52.6rem, 51.52vi + 13.04rem, 59.4rem);
+        }
+
+        &__calendar {
+            width: clamp(52.6rem, 51.52vi + 13.04rem, 59.4rem);
+        }
+
+        &__status {
+            width: clamp(52.6rem, 51.52vi + 13.04rem, 59.4rem);
+        }
+    }
+}

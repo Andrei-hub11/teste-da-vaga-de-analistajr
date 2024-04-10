@@ -1,0 +1,56 @@
+@import '../../utils/mixins';
+@import '../../utils/variables';
+
+.add {
+    @include for-size(smaller-phone) {
+        &__action {
+            left: 50%;
+            transform: translateX(-50%);
+            //deve crescer de 32.8rem até 39.4rem no espaço entre telas de 360px e 430px
+            width: clamp(32.8rem, 94.29vi + -1.14rem, 39.4rem);
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            bottom: 2rem;
+        }
+
+        &__action-btn {
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            //deve crescer de 1.4rem até 1.6rem no espaço entre telas de 360px e 430px
+            font-size: clamp(1.4rem, 2.86vi + 0.37rem, 1.6rem);
+            color: $text-color;
+            background: $secondary-color;
+            letter-spacing: 0.1rem;
+            padding: 0.8rem 2.6rem;
+        }
+
+        &__action-btn {
+            cursor: pointer;
+        }
+
+        & .btn--variant {
+            color: black;
+            background: $text-color;
+        }
+    }
+
+    @include for-size(medium-phone) {
+        &__action {
+            width: clamp(39.4rem, 50.59vi + 17.65rem, 48rem);
+        }
+    }
+
+    @include for-size(phone-only) {
+        &__action {
+            width: clamp(48rem, 27.38vi + 31.57rem, 52.6rem);
+        }
+    }
+
+    @include for-size(tablet-portrait-up) {
+        &__action {
+            width: clamp(52.6rem, 51.52vi + 13.04rem, 59.4rem);
+        }
+    }
+}

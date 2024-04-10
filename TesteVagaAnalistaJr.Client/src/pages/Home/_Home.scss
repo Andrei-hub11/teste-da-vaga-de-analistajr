@@ -1,0 +1,365 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+.home {
+    @include for-size(smaller-phone) {
+        &__title {
+            margin: 2.4rem 2rem;
+            font-family: $headline-font;
+            font-weight: bold;
+            color: $text-color;
+        }
+
+        &__container {
+            margin-top: 2.6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        &__container-inner {
+            margin: 0 auto;
+            //deve crescer de 32.8rem até 39.4rem no espaço entre telas de 360px e 430px
+            width: clamp(32.8rem, 94.29vi + -1.14rem, 39.4rem);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        &__input-search {
+            margin: 0 auto;
+            //deve crescer de 1.4rem até 1.6rem no espaço entre telas de 360px e 430px
+            font-size: clamp(1.4rem, 2.86vi + 0.37rem, 1.6rem);
+            //deve crescer de 32.8rem até 39.4rem no espaço entre telas de 360px e 430px
+            width: clamp(32.8rem, 94.29vi + -1.14rem, 39.4rem);
+            height: 3.6rem;
+            color: $text-color;
+            background: $secondary-color;
+            border-radius: 0.5rem;
+            border: 0.1rem solid $text-color;
+            outline: 0;
+            padding-left: 1rem;
+            caret-color: $text-color;
+            letter-spacing: 0.1rem;
+
+            &::placeholder {
+                letter-spacing: 0.1rem;
+                font-weight: bold;
+                letter-spacing: 0.1rem;
+            }
+
+            &:focus {
+                border: 0.1rem solid $text-color;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:hover {
+                -webkit-box-shadow: 0 0 0 5rem $secondary-color;
+                -webkit-text-fill-color: $secondary-color;
+            }
+        }
+
+        &__filter-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            font-family: $headline-font;
+            text-transform: uppercase;
+            color: $text-color;
+        }
+
+        &__filter-container {
+            display: flex;
+            gap: 1.6rem;
+        }
+
+        &__filter-img {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+        }
+
+        &__filter-option {
+            font-size: clamp(1.4rem, 2.86vi + 0.37rem, 1.6rem);
+            font-weight: bold;
+            font-family: $headline-font;
+            color: $text-color;
+        }
+
+        &__table {
+            margin: 3rem auto;
+            width: clamp(32.8rem, 94.29vi + -1.14rem, 39.4rem);
+            border-collapse: collapse;
+        }
+
+        &__table-header {
+            display: none;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /*  &__table-header {
+        background: $text-color;
+    }
+
+    &__header-row {
+        font-size: 14px;
+        text-align: center;
+        font-size: bold;
+        border: 1px solid black;
+    }
+
+    &__table-data {
+        font-size: 14px;
+        text-align: center;
+        font-size: bold;
+        border: 1px solid green;
+        padding: 1rem;
+    } */
+
+        &__table,
+        &__table-body,
+        .table-row--variant,
+        &__table-row,
+        &__table-data {
+            display: block;
+            width: clamp(32.8rem, 94.29vi + -1.14rem, 39.4rem);
+        }
+
+        &__table-p {
+            //deve crescer de 1.2rem até 1.4rem no espaço entre telas de 360px e 430px
+            font-size: clamp(1.2rem, 2.86vi + 0.17rem, 1.4rem);
+            /* text-align: center; */
+            text-align: right;
+            padding-left: 50%;
+            color: $text-color;
+            word-break: break-word;
+        }
+
+        &__header-row {
+            font-size: 14px;
+            text-align: center;
+            font-size: bold;
+            border: 1px solid black;
+        }
+
+        &__table-data {
+            position: relative;
+            border: 1px solid $text-color;
+            padding: 1rem;
+            letter-spacing: 0.1rem;
+            background: $secondary-color;
+        }
+
+        &__table-data:nth-child(4) {
+            position: relative;
+            border: 1px solid $text-color;
+            padding: 1rem;
+            letter-spacing: 0.1rem;
+            padding-left: 90%;
+            background: $secondary-color;
+        }
+
+        .table-row--variant {
+            margin-bottom: 15px;
+        }
+
+        &__table-data::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 50%;
+            text-align: left;
+            font-size: clamp(1.4rem, 2.86vi + 0.37rem, 1.6rem);
+            font-size: bold;
+            color: $text-color;
+            padding: 0 0 0 1rem;
+        }
+
+        &__table-data:nth-child(4)::before {
+            padding: 0.4rem 0 0 1rem;
+        }
+
+        &__table-action {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        &__action {
+            display: flex;
+            align-items: center;
+            background: $bg-color;
+            padding: 0.2rem 0.9rem;
+            gap: 0.6rem;
+            cursor: pointer;
+        }
+
+        & .btn--table {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            color: $text-color;
+            letter-spacing: 0.1rem;
+        }
+
+        &__information {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //devem crescer de 19.4rem até 23.6rem no espaço entre telas de 360px e 430px
+            width: clamp(19.4rem, 60vi + -2.2rem, 23.6rem);
+            height: clamp(19.4rem, 60vi + -2.2rem, 23.6rem);
+            background: $secondary-color;
+            border-radius: 50%;
+        }
+
+        &__information-text {
+            //deve crescer de 1.4rem 1.6rem no espaço entre telas de 360px e 430px
+            font-size: clamp(1.4rem, 2.86vi + 0.37rem, 1.6rem);
+            font-weight: bold;
+            text-align: center;
+            color: $text-color;
+            letter-spacing: 0.1rem;
+            width: 17.4rem;
+        }
+
+        &__icon {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4.8rem;
+            width: 4.8rem;
+            background: $text-color;
+            bottom: 5.2rem;
+            right: 2.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        &__menu {
+            flex-direction: column;
+            gap: 2rem;
+            border: 0.1rem solid $text-color;
+        }
+
+        &__menu-container {
+            display: flex;
+            gap: 2rem;
+        }
+
+        & .menu__action-btn {
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: clamp(1.2rem, 2.86vi + 0.17rem, 1.4rem);
+            color: $text-color;
+            background: $bg-color;
+            letter-spacing: 0.1rem;
+            padding: 0.4rem 1rem;
+            cursor: pointer;
+        }
+
+        & .btn--variant {
+            background: red;
+        }
+    }
+
+    @include for-size(medium-phone) {
+        &__input-search {
+            height: 4rem;
+            width: clamp(39.4rem, 50.59vi + 17.65rem, 48rem);
+        }
+
+        &__container-inner {
+            width: clamp(39.4rem, 50.59vi + 17.65rem, 48rem);
+        }
+
+        &__table-p {
+            font-size: 1.5rem;
+        }
+
+        &__table-data::before {
+            font-size: clamp(1.6rem, 1.18vi + 1.09rem, 1.8rem);
+        }
+
+        .table-row--variant {
+            margin-bottom: 25px;
+        }
+
+        &__table,
+        &__table-body,
+        .table-row--variant,
+        &__table-row,
+        &__table-data {
+            width: clamp(39.4rem, 50.59vi + 17.65rem, 48rem);
+        }
+    }
+
+    @include for-size(phone-only) {
+        &__input-search {
+            width: clamp(48rem, 27.38vi + 31.57rem, 52.6rem);
+        }
+
+        &__container-inner {
+            width: clamp(48rem, 27.38vi + 31.57rem, 52.6rem);
+        }
+
+        &__table,
+        &__table-body,
+        .table-row--variant,
+        &__table-row,
+        &__table-data {
+            width: clamp(48rem, 27.38vi + 31.57rem, 52.6rem);
+        }
+
+        .btn--table {
+            font-size: clamp(1.6rem, 1.19vi + 0.89rem, 1.8rem);
+        }
+
+        &__table-data:nth-child(4) {
+            padding-left: 94%;
+        }
+    }
+
+    @include for-size(tablet-portrait-up) {
+        &__input-search {
+            width: clamp(52.6rem, 51.52vi + 13.04rem, 59.4rem);
+        }
+
+        &__container-inner {
+            width: clamp(52.6rem, 51.52vi + 13.04rem, 59.4rem);
+        }
+
+        &__table,
+        &__table-body,
+        .table-row--variant,
+        &__table-row,
+        &__table-data {
+            width: clamp(52.6rem, 51.52vi + 13.04rem, 59.4rem);
+        }
+
+        &__information-text {
+            font-size: clamp(1.6rem, 1.52vi + 0.44rem, 1.8rem);
+        }
+
+        &__information {
+            width: clamp(27.6rem, 45.45vi + -7.31rem, 33.6rem);
+            height: clamp(27.6rem, 45.45vi + -7.31rem, 33.6rem);
+        }
+
+        &__action-btn {
+            font-size: clamp(1.4rem, 1.52vi + 0.24rem, 1.6rem);
+        }
+    }
+
+    @include for-size(tablet-landscape-up) {
+    }
+}
